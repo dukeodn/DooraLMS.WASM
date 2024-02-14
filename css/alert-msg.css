@@ -1,0 +1,30 @@
+/* CSS */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.custom-alert {
+    animation: slideDown 0.5s ease forwards, slideUp 0.5s 2.5s ease forwards;
+    background-color: #ff4136; /* ¹àÀº »¡°£»ö */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}

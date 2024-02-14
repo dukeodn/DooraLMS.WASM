@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DooraLMS.Blazor</title>
+    <base href="/" />
+    <link href="_content/DevExpress.Blazor.Themes/office-white.bs5.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="DooraLMS.Blazor.styles.css" rel="stylesheet" />
+    <link href="manifest.webmanifest" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+    <link rel="stylesheet" href="css/dx-demo.css" asp-append-version="true" dx-demo-link>
+    <link rel="stylesheet" href="css/dx-demo-pages.css" asp-append-version="true">
+    <link rel="stylesheet" href="_content/Radzen.Blazor/css/software-base.css">
+    <link rel="stylesheet" href="css/alert-msg.css">
+    <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+    <script src="js/blazor-serial.js"></script>
+    <style type="text/css">
+        .splash-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+            height: 100vh;
+            font-family: "GmarketSansMedium", sans-serif;
+            /*font-family: "Segoe UI",Roboto,"Helvetica Neue","-apple-system",BlinkMacSystemFont,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";*/
+            font-size: .88rem;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+            .splash-screen .spinner-border {
+                border: .2em solid;
+                border-color: #5f368d #bfbfbf #bfbfbf;
+                width: 120px;
+                height: 120px;
+            }
+
+        .splash-screen-caption {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+        }
+
+        .splash-screen-text {
+            color: #a1a1a1;
+            margin-top: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <script type="text/javascript">
+            if (/MSIE \d|Trident.*rv:|Edge\//.test(window.navigator.userAgent))
+                window.location.href = "browserNotSupported.html";
+        </script>
+        <div class="splash-screen">
+            <div class="spinner-border"></div>
+            <div class="splash-screen-caption">DooraLMS</div>
+            <div class="splash-screen-text">Loading...</div>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="js/daum-api.js"></script>
+    <script src="js/report-designer.js"></script>
+    <script src="js/report-viewer.js"></script>
+    <script src="js/KristofferStrube.Blazor.FileSystemAccess.js"></script>
+    <script src="js/byte-to-blob.js"></script>
+
+    <script src="js/webcam.js"></script>
+    <audio id="audioComplete" src="wav/complete.wav" type="audio/wav"></audio>
+    <audio id="audioFail" src="wav/fail.wav" type="audio/wav"></audio>
+    <audio id="audioOkay" src="wav/okay.wav" type="audio/wav"></audio>
+    <audio id="audioPacked" src="wav/Packed.wav" type="audio/wav"></audio>
+    <audio id="audioReceived" src="wav/received.wav" type="audio/wav"></audio>
+    <script src="js/audio-play.js"></script>
+    <script src="js/print-pdf.js"></script>
+</body>
+
+</html>
